@@ -15,6 +15,9 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
     <preference name="windows-target-version" value="10.0" />
     <preference name="windows-phone-target-version" value="10.0" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
 </widget>
