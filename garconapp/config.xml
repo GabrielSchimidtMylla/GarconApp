@@ -17,6 +17,8 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <plugin name="cordova-plugin-splashscreen"></plugin>
+    <preference name="windows-target-version" value="10.0" />
+    <preference name="windows-phone-target-version" value="10.0" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
