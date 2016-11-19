@@ -4,8 +4,43 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {}
+        "files": {
+            "package.appxmanifest": {
+                "parents": {
+                    "/Package/Capabilities": []
+                }
+            }
+        }
     },
-    "installed_plugins": {},
-    "dependent_plugins": {}
+    "installed_plugins": {
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "Garçonete Só de Cenoura"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "Garçonete Só de Cenoura"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "pluginId": "cordova-plugin-splashscreen",
+            "clobbers": [
+                "navigator.splashscreen"
+            ]
+        },
+        {
+            "id": "cordova-plugin-splashscreen.SplashScreenProxy",
+            "file": "plugins/cordova-plugin-splashscreen/www/windows/SplashScreenProxy.js",
+            "pluginId": "cordova-plugin-splashscreen",
+            "merges": [
+                ""
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-splashscreen": "4.0.0",
+        "cordova-plugin-compat": "1.1.0"
+    }
 }

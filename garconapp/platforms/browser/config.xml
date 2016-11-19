@@ -2,10 +2,14 @@
 <widget id="br.com.curitibasoftware.garconapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Garçonete Só de Cenoura</name>
     <description>
+
         Aplicativo para garçom.
+
     </description>
     <author email="contato@curitibasoftware.com.br" href="http://curitibasoftware.com.br">
+
         Curitiba Software
+
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -15,4 +19,9 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
+    <preference name="windows-target-version" value="10.0" />
+    <preference name="windows-phone-target-version" value="10.0" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
 </widget>

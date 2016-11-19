@@ -12,6 +12,9 @@
         },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "br.com.curitibasoftware.garconapp"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "br.com.curitibasoftware.garconapp"
         }
     },
     "dependent_plugins": {}

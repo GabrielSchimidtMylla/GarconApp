@@ -1,17 +1,17 @@
 ﻿cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "id": "phonegap-plugin-barcodescanner.BarcodeScanner",
-        "file": "plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js",
-        "pluginId": "phonegap-plugin-barcodescanner",
+        "id": "cordova-plugin-splashscreen.SplashScreen",
+        "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "pluginId": "cordova-plugin-splashscreen",
         "clobbers": [
-            "cordova.plugins.barcodeScanner"
+            "navigator.splashscreen"
         ]
     },
     {
-        "id": "phonegap-plugin-barcodescanner.BarcodeScannerProxy",
-        "file": "plugins/phonegap-plugin-barcodescanner/src/windows/BarcodeScannerProxy.js",
-        "pluginId": "phonegap-plugin-barcodescanner",
+        "id": "cordova-plugin-splashscreen.SplashScreenProxy",
+        "file": "plugins/cordova-plugin-splashscreen/www/windows/SplashScreenProxy.js",
+        "pluginId": "cordova-plugin-splashscreen",
         "merges": [
             ""
         ]
@@ -20,7 +20,8 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "phonegap-plugin-barcodescanner": "6.0.3"
+    "cordova-plugin-splashscreen": "4.0.0",
+    "cordova-plugin-compat": "1.1.0"
 };
 // BOTTOM OF METADATA
 });
