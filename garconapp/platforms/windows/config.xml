@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="br.com.curitibasoftware.garconapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Garçonete Só de Cenoura</name>
-    <description>
-        Aplicativo para garçom.
+    <description>
+        Aplicativo para garçom.
     </description>
-    <author email="contato@curitibasoftware.com.br" href="http://curitibasoftware.com.br">
-        Curitiba Software
+    <author email="contato@curitibasoftware.com.br" href="http://curitibasoftware.com.br">
+        Curitiba Software
     </author>
     <content src="index.html" />
     <access origin="*" />
