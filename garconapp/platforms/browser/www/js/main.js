@@ -11,6 +11,7 @@ var pedido = function () {
         bindRemoverItem();
         bindCancelarPedido();
         bindLeitorQRCode();
+        bindFinalizarPedido();
     };
 
     self.configuracoes = function () {
@@ -66,10 +67,36 @@ var pedido = function () {
 
     var bindLeitorQRCode = function () {
         $('.scan-qrcode').on('click', function () {
-            navigator.camera.getPicture(function () {
-                Materialize.toast('Leu', 2000);
+            cordova.plugins.barcodeScanner.scan(function (resultado) {
+                Materialize.toast("Mesa: " + resultado.text, 4000);
+                $(".numero-mesa"), val(resultado.text);
+            });
+        }, function (error) {
+            Materialize.toast(error.text, 2000, "red-text");
+        });
+    };
+
+    var bindFinalizarPedido = function () {
+
+        $("#btnFinalizarPedido").on("click", function () {
+            $.ajax({
+                url: "http://cozinhapp.sergiolopes.org/novo-pedido",
+                data: {
+                    mesa: $("#numero-mesa").val(),
+                    pedido: $("#resumo").text()
+                },
+                success: function (dados) {
+                    Materialize.toast(dados, 2000);
+                    $("#numero-mesa").val('');
+                    $("resumo").text('');
+                },
+                error: function (error)
+                {
+                    Materialize.toast(error.responseText, 3000, 'red-text');
+                }
             });
         });
+
     };
 
     return self;

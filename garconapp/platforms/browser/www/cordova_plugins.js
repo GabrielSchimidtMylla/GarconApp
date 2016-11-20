@@ -29,14 +29,6 @@ module.exports = [
         "id": "cordova-plugin-camera.CameraProxy",
         "pluginId": "cordova-plugin-camera",
         "runs": true
-    },
-    {
-        "file": "plugins/cordova-plugin-barcodescanner/www/barcodescanner.js",
-        "id": "cordova-plugin-barcodescanner.BarcodeScanner",
-        "pluginId": "cordova-plugin-barcodescanner",
-        "clobbers": [
-            "cordova.plugins.barcodeScanner"
-        ]
     }
 ];
 module.exports.metadata = 
@@ -44,8 +36,7 @@ module.exports.metadata =
 {
     "cordova-plugin-whitelist": "1.3.0",
     "cordova-plugin-compat": "1.1.0",
-    "cordova-plugin-camera": "2.3.0",
-    "cordova-plugin-barcodescanner": "0.7.0"
+    "cordova-plugin-camera": "2.3.0"
 }
 // BOTTOM OF METADATA
 });

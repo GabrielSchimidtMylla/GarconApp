@@ -67,9 +67,26 @@ var pedido = function () {
     var bindLeitorQRCode = function () {
         $('.scan-qrcode').on('click', function () {
             cordova.plugins.barcodeScanner.scan(function (resultado) {
-                Materialize.toast(resultado.text, 4000);
+                Materialize.toast("Mesa: " + resultado.text, 4000);
+                $(".numero-mesa"), val(resultado.text);
+            });
+        }, function (error) {
+            Materialize.toast(error.text, 2000, "red-text");
+        });
+    };
+
+    var bindFinalizarPedido = function () {
+
+        $("#btnFinalizarPedido").on("click", function () {
+            $.ajax({
+                url: "http://cozinhaapp.sergiolopes.org/novo-pedido",
+                data: {
+                    mesa: $("#numero-mesa").val(),
+                    pedido: $("resumo").text()
+                }
             });
         });
+
     };
 
     return self;
