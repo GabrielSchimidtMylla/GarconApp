@@ -66,8 +66,8 @@ var pedido = function () {
 
     var bindLeitorQRCode = function () {
         $('.scan-qrcode').on('click', function () {
-            navigator.camera.getPicture(function () {
-                Materialize.toast('Leu', 2000);
+            cordova.plugins.barcodeScanner.scan(function (resultado) {
+                Materialize.toast(resultado.text, 4000);
             });
         });
     };

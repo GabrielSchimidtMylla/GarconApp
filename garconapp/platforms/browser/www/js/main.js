@@ -5,10 +5,6 @@ var pedido = function () {
     var self = {};
 
     self.initialize = function () {
-        document.addEventListener("deviceready", onDeviceReady, false);
-        function onDeviceReady() {
-            Materialize.toast('apis iniciadas', 2000);
-        }
         this.configuracoes();
         bindPedido();
         bindConfirmarPedido();
@@ -70,7 +66,7 @@ var pedido = function () {
 
     var bindLeitorQRCode = function () {
         $('.scan-qrcode').on('click', function () {
-            navegation.camera.getPicture(function () {
+            navigator.camera.getPicture(function () {
                 Materialize.toast('Leu', 2000);
             });
         });
@@ -80,6 +76,4 @@ var pedido = function () {
 
 };
 
-window.onload = function () {
-    new pedido().initialize();
-}
+new pedido().initialize();

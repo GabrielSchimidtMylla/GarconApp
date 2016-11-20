@@ -15,6 +15,9 @@
         },
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "br.com.curitibasoftware.garconapp"
+        },
+        "cordova-plugin-barcodescanner": {
+            "PACKAGE_NAME": "br.com.curitibasoftware.garconapp"
         }
     },
     "dependent_plugins": {}
