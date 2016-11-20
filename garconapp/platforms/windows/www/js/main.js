@@ -59,9 +59,7 @@ var pedido = function () {
     var bindCancelarPedido = function () {
         $(".acao-limpar").on("click", function () {
             $("#numero-mesa").val("");
-            $(".badge").each(function () {
-                $(this).remove();
-            });
+            $(".badge").remove();
         });
     };
 
@@ -88,7 +86,8 @@ var pedido = function () {
                 success: function (dados) {
                     Materialize.toast(dados, 2000);
                     $("#numero-mesa").val('');
-                    $("resumo").text('');
+                    $("#resumo").text('');
+                    $(".badge").remove();
                 },
                 error: function (error)
                 {
