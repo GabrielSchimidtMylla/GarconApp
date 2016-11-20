@@ -7,10 +7,10 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-splashscreen": {
+        "cordova-plugin-compat": {
             "PACKAGE_NAME": "Garçonete Só de Cenoura"
         },
-        "cordova-plugin-compat": {
+        "cordova-plugin-camera": {
             "PACKAGE_NAME": "Garçonete Só de Cenoura"
         }
     },

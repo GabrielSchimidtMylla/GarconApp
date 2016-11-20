@@ -15,10 +15,10 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-splashscreen": {
+    "cordova-plugin-camera": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-splashscreen@4.0.0"
+            "id": "cordova-plugin-camera"
         },
         "is_top_level": true,
         "variables": {}

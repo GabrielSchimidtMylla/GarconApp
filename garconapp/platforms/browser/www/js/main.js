@@ -5,6 +5,10 @@ var pedido = function () {
     var self = {};
 
     self.initialize = function () {
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            Materialize.toast('apis iniciadas', 2000);
+        }
         this.configuracoes();
         bindPedido();
         bindConfirmarPedido();
@@ -66,17 +70,9 @@ var pedido = function () {
 
     var bindLeitorQRCode = function () {
         $('.scan-qrcode').on('click', function () {
-            cordova.plugins.barcodeScanner.scan(
-                        function (resultado) {
-                            if (resultado.text) {
-                                Materialize.toast('Mesa ' + resultado.text, 2000);
-                                $('#numero-mesa').val(resultado.text);
-                            }
-                        },
-                        function (error) {
-                            Materialize.toast('Erro: ' + error, 3000, 'red-text');
-                        }
-            );
+            navegation.camera.getPicture(function () {
+                Materialize.toast('Leu', 2000);
+            });
         });
     };
 

@@ -66,17 +66,9 @@ var pedido = function () {
 
     var bindLeitorQRCode = function () {
         $('.scan-qrcode').on('click', function () {
-            cordova.plugins.barcodeScanner.scan(
-                        function (resultado) {
-                            if (resultado.text) {
-                                Materialize.toast('Mesa ' + resultado.text, 2000);
-                                $('#numero-mesa').val(resultado.text);
-                            }
-                        },
-                        function (error) {
-                            Materialize.toast('Erro: ' + error, 3000, 'red-text');
-                        }
-            );
+            navigator.camera.getPicture(function () {
+                Materialize.toast('Leu', 2000);
+            });
         });
     };
 
@@ -84,6 +76,4 @@ var pedido = function () {
 
 };
 
-window.onload = function () {
-    new pedido().initialize();
-}
+new pedido().initialize();
