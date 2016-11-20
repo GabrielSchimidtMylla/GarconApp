@@ -67,8 +67,11 @@ var pedido = function () {
     var bindLeitorQRCode = function () {
         $('.scan-qrcode').on('click', function () {
             cordova.plugins.barcodeScanner.scan(function (resultado) {
-                Materialize.toast(resultado.text, 4000);
+                Materialize.toast("Mesa: " + resultado.text, 4000);
+                $(".numero-mesa"), val(resultado.text);
             });
+        }, function (error) {
+            Materialize.toast(error.text, 2000, "red-text");
         });
     };
 
