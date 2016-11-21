@@ -12,6 +12,9 @@
         },
         "cordova-plugin-camera": {
             "PACKAGE_NAME": "Garçonete Só de Cenoura"
+        },
+        "cordova-plugin-barcodescanner": {
+            "PACKAGE_NAME": "Garçonete Só de Cenoura"
         }
     },
     "dependent_plugins": {}
